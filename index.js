@@ -6,7 +6,8 @@ const typeDefs = require('./schema')
 const resolvers = require('./resolvers')
 
 // Connection DB
-mongoose.connect('mongodb+srv://test:test123@cluster0.kd5z5.mongodb.net/learn_graphql?retryWrites=true&w=majority')
+const URI = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`
+mongoose.connect(URI)
 
 const server = new ApolloServer({typeDefs,resolvers,plugins:[ApolloServerPluginLandingPageGraphQLPlayground]})
 server.listen().then(({url})=>{
