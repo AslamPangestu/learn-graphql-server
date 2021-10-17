@@ -1,0 +1,17 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "author": "AslamPangestu",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^3.3.0",
+    "apollo-server-core": "^3.3.0",
+    "graphql": "^15.5.3",
+    "mongoose": "^6.0.5"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
